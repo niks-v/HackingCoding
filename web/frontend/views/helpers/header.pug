@@ -1,0 +1,31 @@
+nav.navbar.navbar-expand-lg.bg-light
+    .container-fluid.px-5
+        a.navbar-brand(href='/') #{web.name}
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.me-5.mb-2.mb-lg-0
+            li.nav-item
+            a.nav-link(href='https://discord.gg/MwVE6KffFK' target='_blank') Join the Discord
+            li.nav-item.dropdown
+                a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    | Content
+                ul.dropdown-menu(aria-labelledby='navbarDropdown')
+                    li
+                    a.dropdown-item(href='/i') Resources and tutorials
+                    li
+                    a.dropdown-item(href='#') Button2
+                    li
+                    hr.dropdown-divider
+                    //Buttons loaded from top files in ../../md-files
+                    li
+                    a.dropdown-item(href='#') Button1
+                    li
+                    a.dropdown-item(href='#') Button2
+                    li
+                    a.dropdown-item(href='#') Button3
+            li.nav-item
+            a.nav-link.disabled Disabled
+        form.d-flex.r-5(role='search')
+            input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
+            button.btn.btn-outline-success(type='submit') Search

@@ -1,0 +1,16 @@
+li.nav-item.dropdown
+    a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+        | Content
+    ul.dropdown-menu(aria-labelledby='navbarDropdown')
+        li
+            a.dropdown-item(href='/i') Resources and tutorials
+        li
+            a.dropdown-item(href='/community') Our community
+        li
+            a.dropdown-item(href='/donate') Donate
+        li
+        hr.dropdown-divider
+        //top level md folders
+        each val in MDTL
+            li
+                a(class='dropdown-item' href=`i?path=${val.path}&type=directory`)= val.name
